@@ -1,83 +1,99 @@
-// "use client";
+"use client";
 
-// import { Button } from "@/components/ui/button";
-// import { UserButton, useUser } from "@clerk/nextjs";
-// import { Plus } from "lucide-react";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import React, { useEffect } from "react";
-// import { Separator } from "@/components/ui/separator";
-// import { SidebarTrigger } from "@/components/ui/sidebar";
-// import { ModeToggle } from "@/components/ui/mode-toggle";
-// import {
-//   NavigationMenu,
-//   NavigationMenuContent,
-//   NavigationMenuIndicator,
-//   NavigationMenuItem,
-//   NavigationMenuLink,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-//   NavigationMenuViewport,
-// } from "@/components/ui/navigation-menu";
-
-// function Header() {
-//   const path = usePathname();
-//   const { user, isSignedIn } = useUser();
-//   useEffect(() => {
-//     console.log(path);
-//   }, [path]);
-
-//   return (
-//     <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-12 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
-//       <div className="flex w-full justify-between items-center gap-1 px-4 lg:gap-2 lg:px-6">
-//         <div className="flex items-center">
-//           <SidebarTrigger className="-ml-1" />
-//           <Separator
-//             orientation="vertical"
-//             className="mx-2 data-[orientation=vertical]:h-4"
-//           />
-//           <h1 className="text-base font-medium">Pantheon Capital Oversight</h1>
-//         </div>
-
-//         <NavigationMenu>
-//           <NavigationMenuList className="flex items-center gap-4">
-//             <NavigationMenuItem>
-//               <Link href="/overview" legacyBehavior passHref>
-//                 <NavigationMenuLink>Overview</NavigationMenuLink>
-//               </Link>
-//             </NavigationMenuItem>
-//             <NavigationMenuItem>
-//               <Link href="/market" legacyBehavior passHref>
-//                 <NavigationMenuLink>Market</NavigationMenuLink>
-//               </Link>
-//             </NavigationMenuItem>
-//             <NavigationMenuItem>
-//               <Link href="/news" legacyBehavior passHref>
-//                 <NavigationMenuLink>News</NavigationMenuLink>
-//               </Link>
-//             </NavigationMenuItem>
-//             <NavigationMenuItem>
-//               <Link href="/trade" legacyBehavior passHref>
-//                 <NavigationMenuLink>Trades</NavigationMenuLink>
-//               </Link>
-//             </NavigationMenuItem>
-//           </NavigationMenuList>
-//         </NavigationMenu>
-//         <div className="flex gap-4">
-//           <UserButton />
-//           <ModeToggle />
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
-
-// export default Header;
+import { Button } from "@/components/ui/button";
+import { UserButton, useUser } from "@clerk/nextjs";
 import React from "react";
+import Link from "next/link";
 
 function Header() {
-  return <div>Header</div>;
+  const { user, isSignedIn } = useUser();
+
+  return (
+    <header className="bg-white dark:bg-transparent">
+      <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <a
+          className="block text-teal-600 dark:text-green-400 font-semibold"
+          href="#"
+        >
+          {" "}
+          Pantheon
+          <span className="text-white"> Capital Oversight</span>
+        </a>
+
+        <div className="flex flex-1 items-center justify-end md:justify-between gap-6 md:gap-4">
+          <nav aria-label="Global" className="block md:hidden">
+            <ul className="flex items-center gap-6 text-sm">
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Careers
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  History
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Projects
+                </a>
+              </li>
+
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <div className="sm:flex sm:gap-4">
+              {isSignedIn ? (
+                <UserButton />
+              ) : (
+                <Link href={"/sign-in"}>
+                  <Button variant="outline">Login</Button>
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;
