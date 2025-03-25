@@ -159,7 +159,7 @@ export function ChartAreaInteractive() {
   });
 
   return (
-    <Card className="@container/card basis-3/4">
+    <Card className="@container/card mx-4">
       <CardHeader className="relative">
         <CardTitle>Total Visitors</CardTitle>
         <CardDescription>

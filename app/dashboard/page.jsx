@@ -48,16 +48,19 @@ export default function Page() {
               Change your password here.
             </TabsContent> */}
           </Tabs>
-          <div className="@container/main flex flex-1 flex-col gap-2">
-            {/* <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6"> */}
-            <SectionCards />
-            <div className="px-4 lg:px-6 flex gap-4 py-4 md:gap-6 md:py-6">
-              <ChartAreaInteractive />
-              <Chat className="basis-1/4" />
+          <div className="flex flex-row">
+            <div className="flex flex-1 flex-col gap-2">
+              {/* <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6"> */}
+              <SectionCards />
+              <ChartAreaInteractive className="px-4" />
             </div>
-            {/* <DataTable data={data} /> */}
-            {/* </div> */}
+            <div className="px-4 lg:px-6 md:gap-6 md:py-6">
+              <Chat className="h-full" />
+            </div>
           </div>
+
+          {/* <DataTable data={data} /> */}
+          {/* </div> */}
         </div>
       </SidebarInset>
     </SidebarProvider>
