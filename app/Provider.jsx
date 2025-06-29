@@ -5,7 +5,7 @@ import { ThemeProvider } from "../components/providers/theme-provider";
 
 function Provider({ children }) {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -13,7 +13,7 @@ function Provider({ children }) {
         // disableTransitionOnChange
       >
         {/* <Header /> */}
-        {children}
+        <div className="flex items-center justify-center">{children}</div>
       </ThemeProvider>
     </div>
   );

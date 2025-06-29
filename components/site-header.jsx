@@ -85,7 +85,7 @@ export function SiteHeader() {
         </NavigationMenu>
         <div className="flex gap-4">
           <UserButton />
-          <ModeToggle />
+          {/* <ModeToggle /> */}
         </div>
       </div>
     </header>
