@@ -25,7 +25,7 @@ const Landing = () => {
         <div class="mx-auto grid h-screen w-screen max-w-screen-xl place-content-center px-4 py-16">
           <div class="mx-auto text-center">
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-              Your road to
+              Your path to
               <strong class="text-green-600"> financial </strong> success
             </h1>
 
@@ -58,7 +58,7 @@ const Landing = () => {
       >
         <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
           <div class="max-w-screen mb-12 px-8">
-            <h2 class="pb-12 text-center text-2xl font-bold text-slate-900 dark:text-white">
+            <h2 class="pb-8 text-center text-xl font-bold text-slate-900 dark:text-white sm:pb-12 sm:text-2xl">
               Our Integrated Solution
             </h2>
           </div>
@@ -67,7 +67,7 @@ const Landing = () => {
               <h6 class="mb-3 text-base font-semibold text-slate-900 dark:text-white">
                 Multi-Agent System
               </h6>
-              <p class="text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+              <p class="text-xs leading-relaxed text-slate-600 dark:text-gray-400 sm:text-sm">
                 Our templates are crafted with usability in mind. Whether you're
                 a developer or a business owner, you’ll find our layouts
                 intuitive and quick to set up. With clean code, responsive
@@ -78,7 +78,7 @@ const Landing = () => {
               <h6 class="mb-3 text-base font-semibold text-slate-900 dark:text-white">
                 Smart Asset Management
               </h6>
-              <p class="text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+              <p class="text-xs leading-relaxed text-slate-600 dark:text-gray-400 sm:text-sm">
                 Stand out with fresh, contemporary designs built to impress.
                 Every template follows the latest UI/UX principles to ensure
                 your content is easy to read, visually appealing, and accessible
@@ -89,15 +89,15 @@ const Landing = () => {
               <h6 class="mb-3 text-base font-semibold text-slate-900 dark:text-white">
                 Financial Research
               </h6>
-              <p class="text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+              <p class="text-xs leading-relaxed text-slate-600 dark:text-gray-400 sm:text-sm">
                 Speed matters—for both users and search engines. Our templates
                 are optimized for fast loading and seamless performance. Easily
                 customize every section to fit your branding and project goals.
               </p>
             </div>
           </div>
-          <div className="mt-12">
-            <p class="mx-auto mt-4 w-[65%] text-pretty text-xs text-gray-700 dark:text-gray-200 sm:max-w-[65%] sm:text-base">
+          <div className="mt-12 sm:mt-20">
+            <p class="mx-auto mt-4 w-[85%] text-pretty text-sm text-gray-700 dark:text-gray-200 sm:max-w-[40%] sm:text-base">
               Start using our smart multi-agent AI Systems to make a change in
               your financial game.
             </p>
@@ -111,33 +111,8 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* GREEN BOX */}
-      <section class="mx-auto mb-32 max-w-5xl rounded-sm bg-gray-100 p-10 dark:bg-green-800">
-        <div>
-          <h3 class="mb-4 text-2xl font-semibold text-slate-900 dark:text-white">
-            Why Pantheon Capital?
-          </h3>
-          <p class="text-base leading-relaxed text-slate-600 dark:text-white">
-            Great design isn’t just about how things look—it’s about how they
-            work. Whether you're building a landing page, product interface, or
-            marketing asset, strong design helps improve user experience, boosts
-            trust, and drives conversions. At ReadymadeUI, we focus on creating
-            reusable, visually appealing layouts that make your development
-            faster and easier.
-          </p>
-          <div class="mt-4">
-            <a
-              href="javascript:void(0);"
-              class="text-base font-semibold text-blue-500 hover:underline dark:text-blue-300"
-            >
-              Read more...
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
-      <section className="mx-auto flex justify-center gap-8">
+      {/* <section className="mx-auto flex justify-center gap-8">
         <article class="rounded-lg border border-gray-100 bg-white p-6 dark:border-gray-800 dark:bg-transparent">
           <div class="flex items-center justify-between">
             <div>
@@ -247,10 +222,10 @@ const Landing = () => {
             </p>
           </div>
         </article>
-      </section>
+      </section> */}
 
       {/* FAQs Section */}
-      <section id="faq" class="mx-auto mb-24 max-w-4xl space-y-4">
+      <section id="faq" class="mx-auto mb-48 max-w-2xl space-y-4">
         <details
           class="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-neutral-950 [&_summary::-webkit-details-marker]:hidden"
           open
@@ -313,7 +288,126 @@ const Landing = () => {
             distinctio corporis earum similique!
           </p>
         </details>
+        <details class="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-neutral-950 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5">
+            <h2 class="text-lg font-medium text-gray-900 dark:text-white">
+              What are the verticals in which Pantheon oeprates?
+            </h2>
+
+            <span class="shrink-0 rounded-full bg-white p-1.5 text-gray-900 dark:bg-gray-800 dark:text-white sm:p-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5 shrink-0 shadow-sm transition duration-300 group-open:-rotate-45"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </summary>
+
+          <p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-400">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
+            veritatis molestias culpa in, recusandae laboriosam neque aliquid
+            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
+            distinctio corporis earum similique!
+          </p>
+        </details>
       </section>
+
+      {/* GREEN BOX */}
+      <section class="mx-auto mb-32 max-w-5xl rounded-sm bg-gray-100 p-10 dark:bg-green-800">
+        <div>
+          <h3 class="mb-4 text-2xl font-semibold text-slate-900 dark:text-white">
+            Why Pantheon Capital?
+          </h3>
+          <p class="text-base leading-relaxed text-slate-600 dark:text-white">
+            Great design isn’t just about how things look—it’s about how they
+            work. Whether you're building a landing page, product interface, or
+            marketing asset, strong design helps improve user experience, boosts
+            trust, and drives conversions. At ReadymadeUI, we focus on creating
+            reusable, visually appealing layouts that make your development
+            faster and easier.
+          </p>
+          <div class="mt-4">
+            <a
+              href="javascript:void(0);"
+              class="text-base font-semibold text-blue-500 hover:underline dark:text-blue-300"
+            >
+              Read more...
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-white dark:bg-transparent">
+        <div class="container mx-auto px-4">
+          <div class="mx-auto max-w-4xl pb-11 pt-24">
+            {/* logo  */}
+            <a
+              className="mb-5 block max-w-max text-sm font-semibold text-teal-600 dark:text-green-600 sm:pt-0 sm:text-lg md:mx-auto"
+              href="/"
+            >
+              {" "}
+              Pantheon
+              <span className="text-white"> Capital Oversight</span>
+            </a>
+            {/* links  */}
+            <div class="-mx-3 flex flex-wrap justify-center lg:-mx-6">
+              <div class="w-full p-3 md:w-auto md:px-6">
+                <a
+                  href="/terms"
+                  class="text-md inline-block font-medium text-gray-500 hover:text-gray-600"
+                >
+                  Terms
+                </a>
+              </div>
+              <div class="w-full p-3 md:w-auto md:px-6">
+                <a
+                  href="/privacy"
+                  class="text-md inline-block font-medium text-gray-500 hover:text-gray-600"
+                >
+                  Privacy
+                </a>
+              </div>
+              <div class="w-full p-3 md:w-auto md:px-6">
+                <a
+                  class="text-md inline-block font-medium text-gray-500 hover:text-gray-600"
+                  href=""
+                >
+                  Contact Us
+                </a>
+              </div>
+              <div class="w-full p-3 md:w-auto md:px-6">
+                <a
+                  href="/careers"
+                  class="text-md inline-block font-medium text-gray-500 hover:text-gray-600"
+                >
+                  Careers
+                </a>
+              </div>
+              <div class="w-full p-3 md:w-auto md:px-6">
+                <a
+                  href="/pricing"
+                  class="text-md inline-block font-medium text-gray-500 hover:text-gray-600"
+                >
+                  Pricing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div class="border-b border-gray-400"></div> */}
+        <div class="container mx-auto px-4">
+          <p class="text-md py-10 text-center font-medium text-gray-400 md:pb-20">
+            © 2025 jtek.in All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

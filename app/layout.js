@@ -27,8 +27,9 @@ export default function RootLayout({ children }) {
       }}
     >
       <html lang="en" suppressHydrationWarning>
+        {/* Dark mode enabled by default irrespective of browser preference */}
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+          className={`${geistSans.variable} ${geistMono.variable} dark h-screen w-screen overflow-x-hidden bg-black antialiased`}
         >
           <Provider>{children}</Provider>
         </body>
