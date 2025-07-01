@@ -8,23 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        xl: {
-          max: "1279px",
-        },
-        lg: {
-          max: "1023px",
-        },
-        md: {
-          max: "767px",
-        },
-        sm: {
-          max: "639px",
-        },
-        xs: {
-          max: "400px",
-        },
-      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -37,7 +20,7 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "#397B26",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

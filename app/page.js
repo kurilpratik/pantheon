@@ -50,8 +50,79 @@ export default function Home() {
         </div>
       </section>
 
+      <div class="max-w-5xl mx-auto bg-gray-100 p-10 rounded-sm">
+        <div>
+          <h3 class="text-slate-900 text-2xl font-semibold mb-4">
+            Why Quality Design Matters
+          </h3>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Great design isn’t just about how things look—it’s about how they
+            work. Whether you're building a landing page, product interface, or
+            marketing asset, strong design helps improve user experience, boosts
+            trust, and drives conversions. At ReadymadeUI, we focus on creating
+            reusable, visually appealing layouts that make your development
+            faster and easier.
+          </p>
+          <div class="mt-4">
+            <a
+              href="javascript:void(0);"
+              class="text-blue-500 font-semibold hover:underline text-base"
+            >
+              Read more...
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div class="max-w-2xl px-8 mb-12">
+            <h2 class="text-slate-900 text-2xl font-bold">
+              Why Choose Our Templates
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-y-8 lg:divide-x-2 lg:divide-gray-300">
+            <div class="px-8">
+              <h6 class="text-slate-900 text-base font-semibold mb-3">
+                Reliable & Easy to Use
+              </h6>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Our templates are crafted with usability in mind. Whether you're
+                a developer or a business owner, you’ll find our layouts
+                intuitive and quick to set up. With clean code, responsive
+                design, and thoughtful structure, you can get your site live
+                without any hassle or steep learning curve.
+              </p>
+            </div>
+            <div class="px-8">
+              <h6 class="text-slate-900 text-base font-semibold mb-3">
+                Modern & Clean Designs
+              </h6>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Stand out with fresh, contemporary designs built to impress.
+                Every template follows the latest UI/UX principles to ensure
+                your content is easy to read, visually appealing, and accessible
+                across all devices. From spacing to typography, we focus on the
+                details that matter.
+              </p>
+            </div>
+            <div class="px-8">
+              <h6 class="text-slate-900 text-base font-semibold mb-3">
+                Built for Speed & Flexibility
+              </h6>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Speed matters—for both users and search engines. Our templates
+                are optimized for fast loading and seamless performance. Easily
+                customize every section to fit your branding and project goals
+                without digging through complex code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Stats Section */}
-      {/* <section className="flex mx-auto justify-center gap-8">
+      <section className="flex mx-auto justify-center gap-8">
         <article class="rounded-lg border border-gray-100 bg-white p-6 dark:border-gray-800 dark:bg-transparent">
           <div class="flex items-center justify-between">
             <div>
@@ -161,7 +232,7 @@ export default function Home() {
             </p>
           </div>
         </article>
-      </section> */}
+      </section>
 
       {/* FAQs Section */}
       <section id="faq" class="space-y-4 max-w-4xl mx-auto mb-24">
