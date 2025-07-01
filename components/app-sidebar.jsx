@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import {
-  ArrowUpCircleIcon,
   BarChartIcon,
   CameraIcon,
   ClipboardListIcon,
@@ -10,18 +9,15 @@ import {
   FileCodeIcon,
   FileIcon,
   FileTextIcon,
-  FolderIcon,
   HelpCircleIcon,
   LayoutDashboardIcon,
   ListIcon,
   SearchIcon,
   SettingsIcon,
-  UsersIcon,
+  NewspaperIcon,
+  ChartCandlestickIcon,
 } from "lucide-react";
 
-import { NavDocuments } from "@/components/nav-documents";
-import { NavMain } from "@/components/nav-main";
-import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
@@ -42,28 +38,23 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: ListIcon,
-    },
-    {
-      title: "Analytics",
-      url: "#",
+      title: "Stock Analysis",
+      url: "/dashboard/stock-analysis",
       icon: BarChartIcon,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: FolderIcon,
+      title: "News",
+      url: "/dashboard/news",
+      icon: NewspaperIcon,
     },
     {
-      title: "Team",
-      url: "#",
-      icon: UsersIcon,
+      title: "Trades",
+      url: "/dashboard/trades",
+      icon: ChartCandlestickIcon,
     },
   ],
   navClouds: [
@@ -160,18 +151,33 @@ export function AppSidebar({ ...props }) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+              <a href="#" className="mt-1">
+                {/* <ArrowUpCircleIcon className="h-5 w-5" /> */}
+                <span className="text-base font-semibold">
+                  <span className="text-green-600">Pantheon </span>
+                  Capital Oversight
+                </span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <nav className="mb-4 ml-1 pt-4">
+          <ul className="flex flex-col gap-2">
+            {data.navMain.map((item) => (
+              <li key={item.title}>
+                <a
+                  href={item.url}
+                  className="flex items-center gap-2 rounded px-3 py-2 transition hover:bg-slate-800"
+                >
+                  <item.icon className="h-4 w-4" />
+                  <span>{item.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
