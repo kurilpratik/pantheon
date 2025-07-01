@@ -14,7 +14,7 @@ function Header() {
         <header className="bg-white dark:bg-transparent">
           <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
             <a
-              className="block text-teal-600 dark:text-green-600 font-semibold"
+              className="block text-sm font-semibold text-teal-600 dark:text-green-600 sm:pt-0 sm:text-lg"
               href="/"
             >
               {" "}
@@ -82,17 +82,17 @@ function Header() {
               </nav>
 
               <div className="flex items-center gap-4">
-                <div className="gap-2 flex">
+                <div className="flex gap-[0px] sm:gap-2">
                   {isSignedIn ? (
                     <UserButton />
                   ) : (
                     <>
                       <Link href={"/sign-in"}>
-                        <Button variant="outline" className="mr-2">
+                        <Button variant="outline" className="sm:mr-2">
                           Signin
                         </Button>
                       </Link>
-                      <Link href={"/sign-up"}>
+                      <Link href={"/sign-up"} className="hidden sm:block">
                         <Button variant="default">Signup</Button>
                       </Link>
                     </>
