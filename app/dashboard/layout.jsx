@@ -6,7 +6,7 @@ import Chat from "../_components/Chat";
 
 export default function DashboardLayout({ children }) {
   return (
-    <SidebarProvider className="sidebar-provider">
+    <SidebarProvider className="sidebar-provider overflow-clip">
       <Image
         src="/green-gradient.png"
         alt="Green gradient"
@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }) {
       />
       <AppSidebar variant="sidebar" />
       {/* MAIN  */}
-      <SidebarInset className="h-screen overflow-y-hidden bg-transparent">
+      <SidebarInset className="overflow-idden max-h-screen bg-transparent">
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="flex flex-row">
