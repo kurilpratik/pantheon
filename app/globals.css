@@ -112,3 +112,27 @@ body {
   filter: blur(100px);
   border-radius: 200px;
 }
+
+/* Minimalist custom scrollbar */
+.minimal-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: grey #000000; /* thumb color, track color */
+  padding-right: 1rem;
+}
+
+/* Chrome, Edge, Safari */
+.minimal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  background: #000000;
+  padding-right: 1rem;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 8px;
+  border: 2px solid #f4f4f5;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: darkgrey;
+}

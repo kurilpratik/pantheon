@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }) {
       />
       <AppSidebar variant="sidebar" />
       {/* MAIN  */}
-      <SidebarInset className="overflow-idden max-h-screen bg-transparent">
+      <SidebarInset className="bg-transparent">
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="flex flex-row">
