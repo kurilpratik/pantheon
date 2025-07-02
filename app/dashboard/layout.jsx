@@ -24,7 +24,8 @@ export default function DashboardLayout({ children }) {
         id="purple-gradient"
       />
       <AppSidebar variant="sidebar" />
-      <SidebarInset>
+      {/* MAIN  */}
+      <SidebarInset className="h-screen overflow-y-hidden bg-transparent">
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="flex flex-row">

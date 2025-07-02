@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import {
   BarChartIcon,
   CameraIcon,
@@ -142,6 +143,8 @@ const data = {
 };
 
 export function AppSidebar({ ...props }) {
+  const pathname = usePathname();
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -165,17 +168,26 @@ export function AppSidebar({ ...props }) {
       <SidebarContent>
         <nav className="mb-4 ml-1 pt-4">
           <ul className="flex flex-col gap-2">
-            {data.navMain.map((item) => (
-              <li key={item.title}>
-                <a
-                  href={item.url}
-                  className="flex items-center gap-2 rounded px-3 py-2 transition hover:bg-slate-800"
-                >
-                  <item.icon className="h-4 w-4" />
-                  <span>{item.title}</span>
-                </a>
-              </li>
-            ))}
+            {data.navMain.map((item) => {
+              const isActive = pathname === item.url;
+              return (
+                <li key={item.title}>
+                  <a
+                    href={item.url}
+                    className={`flex items-center gap-2 rounded px-3 py-2 transition hover:bg-green-800 ${
+                      isActive ? "" : ""
+                    }`}
+                  >
+                    <item.icon
+                      className={`h-4 w-4 ${isActive ? "text-green-500" : ""}`}
+                    />
+                    <span className={`${isActive ? "text-green-500" : ""}`}>
+                      {item.title}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </SidebarContent>
