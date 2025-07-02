@@ -120,7 +120,7 @@ export default function Chat({ className, ...props }) {
 
       <CardContent className="flex flex-1 flex-col gap-4">
         {/* Chat Messages */}
-        <div className="max-h-[475px] flex-1 space-y-4 overflow-y-auto overflow-x-hidden">
+        <div className="hidden-scrollbar max-h-[475px] flex-1 space-y-4 overflow-y-auto overflow-x-hidden">
           {messages.map((message, index) => (
             <div
               key={index}

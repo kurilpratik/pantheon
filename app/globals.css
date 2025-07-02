@@ -117,14 +117,14 @@ body {
 .minimal-scrollbar {
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: grey #000000; /* thumb color, track color */
-  padding-right: 1rem;
+  padding-right: 3px;
 }
 
 /* Chrome, Edge, Safari */
 .minimal-scrollbar::-webkit-scrollbar {
   width: 8px;
   background: #000000;
-  padding-right: 1rem;
+  padding-right: 3px;
 }
 
 .minimal-scrollbar::-webkit-scrollbar-thumb {
@@ -135,4 +135,13 @@ body {
 
 .minimal-scrollbar::-webkit-scrollbar-thumb:hover {
   background: darkgrey;
+}
+
+/* Hidden custom scrollbar */
+.hidden-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
