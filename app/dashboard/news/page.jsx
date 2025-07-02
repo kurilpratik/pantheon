@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const NEWS_API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY; // Replace with your NewsAPI key
 const NEWS_API_URL = `https://newsapi.org/v2/everything?q=finance OR stock OR trading OR market&language=en&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`;
@@ -47,9 +48,9 @@ const News = () => {
         <h2 className="">Latest Market News </h2>
         {visibleCount < articles.length && (
           <div className="flex items-center justify-center gap-2">
-            <div className="grid h-7 w-7 place-content-center rounded-full bg-gray-900">
+            <Badge className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums">
               {visibleCount}
-            </div>
+            </Badge>
             <Button
               variant="outline"
               onClick={() => setVisibleCount((prev) => prev + 10)}
