@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Provider from "./Provider";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
+// import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider } from "../providers/clerk-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,11 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         {/* Dark mode enabled by default irrespective of browser preference */}
         <body

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./_components/Header";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import { ThemeProvider } from "../components/providers/theme-provider";
+import { ThemeProvider } from "../providers/theme-provider";
 
 function Provider({ children }) {
   return (

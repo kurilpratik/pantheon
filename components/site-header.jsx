@@ -17,11 +17,13 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { useUser } from "@clerk/nextjs";
+// Import the Zustand store instead of useUser
+import { useClerkStore } from "@/lib/stores/clerk-store";
 
 export function SiteHeader() {
   const path = usePathname();
-  const { isSignedIn, user, isLoaded } = useUser();
+  // Use Zustand store instead of direct Clerk hook
+  const { user, isSignedIn, isLoaded } = useClerkStore();
   return (
     <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-12 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
       <div className="flex w-full items-center justify-between gap-1 px-4 lg:gap-2 lg:px-6">
@@ -83,7 +85,9 @@ export function SiteHeader() {
         </NavigationMenu> */}
 
         <div className="flex gap-4">
-          <p>Hey {user.firstName}!</p>
+          {isLoaded && isSignedIn && user && user.firstName && (
+            <p>Hey {user.firstName}!</p>
+          )}{" "}
           <UserButton />
           {/* <ModeToggle /> */}
         </div>
