@@ -109,7 +109,7 @@ export default function Chat({ className, ...props }) {
   };
 
   return (
-    <Card className="flex h-[600px] w-[380px] flex-col">
+    <Card className="flex h-[620px] w-[380px] flex-col">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Bot className="h-5 w-5" />
@@ -120,7 +120,7 @@ export default function Chat({ className, ...props }) {
 
       <CardContent className="flex flex-1 flex-col gap-4">
         {/* Chat Messages */}
-        <div className="max-h-[300px] flex-1 space-y-4 overflow-y-auto">
+        <div className="max-h-[475px] flex-1 space-y-4 overflow-y-auto">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -166,7 +166,7 @@ export default function Chat({ className, ...props }) {
 
           {isLoading && (
             <div className="flex justify-start gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-500">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500">
                 <Bot className="h-4 w-4 text-white" />
               </div>
               <div className="rounded-lg bg-muted px-3 py-2 text-sm">
